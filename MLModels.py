@@ -5,9 +5,9 @@ from sklearn.metrics import f1_score
 from sklearn.pipeline import make_pipeline
 
 
-def bayesian(data, target, test_size=0.33) -> float:
+def bayesian(data, target, test_ratio=0.33) -> float:
     data_train, data_test, target_train, target_test = train_test_split(
-        data, target, test_size=test_size, random_state=125
+        data, target, test_size=test_ratio, random_state=125
     )
 
     #model = make_pipeline(TfidfVectorizer(), MultinomialNB())
